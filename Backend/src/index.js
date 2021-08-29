@@ -1,5 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
+require('dotenv').config();
 const swaggerUI = require('swagger-ui-express');
 const swaggerDocs = require('./swagger.json');
 const routes = require('./routes');
@@ -9,7 +10,7 @@ const cors = require('cors');
 
 //mongoose = orm 
 
-mongoose.connect('mongodb+srv://DianaSalmazo:frnAHKpKtuPbwxdt@cluster0.ixgxz.mongodb.net/ProjetoGama?retryWrites=true&w=majority' , {
+mongoose.connect(process.env.MONGO_URL, {
 
 });
 
