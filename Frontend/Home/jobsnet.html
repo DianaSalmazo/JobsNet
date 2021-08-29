@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/b21c68b8ef.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="jobsnet.css">
+    <title>JobsNet - Recrutamentos em Tecnologia</title>
+</head>
+<body>
+    
+    <div class="cabecalho"> <img src="./logo.jpg"></div>
+
+    <div id="navbar">
+        <ul><a href="jobsnet.html"> Home </a> </ul>
+        <ul><a href="../Formulário/index.html" target="_blank"> Formulário </a></ul>
+        <ul><a href="https://github.com/DianaSalmazo" target="_blank"> GitHub </a></ul>
+        <ul><a href="mailto:dcrsalmazo@gmail.com"> Fale conosco </a></ul>
+    </div>
+    <br><br><br>
+
+    <div class="arrow" onclick="displayAbout()" id="arrow"><i id="animation" class="fas fa-sort-down"></i></div>
+    
+    <div id="more" style="display: none;">
+      <p class="paragrafo" width="40%">Seja bem-vindo ao Jobs Net! Aqui estamos prontos para conectar pessoas e empresas em oportunidades com o seu perfil, sua área de atuação e interesse. Faça parte do nosso banco de talentos!</p>
+      <p class="aqui"><a href="../Formulário/index.html">Clique aqui e preencha seu formulário!</a></p>
+    
+    </div>
+    
+</body>
+
+<footer>
+    <br><br>
+    <p>Desenvolvido por <a href="https://www.linkedin.com/in/diana-salmazo/" id="linkedin"> Diana Salmazo </a> para 
+        Start Tech da Gama Academy. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+    function displayAbout() {
+        var arrow = document.getElementById ('animation');
+        arrow.classList.toggle('rotate');
+        var display = document.getElementById('more');
+        display.classList.toggle('active')
+    }
+</script>  
+</html>
