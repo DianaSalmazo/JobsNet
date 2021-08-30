@@ -193,21 +193,24 @@ const Formulario = () => {
     return form
 }
 
-const criarCandidato = async (Candidate) => {
-  const requisicao = await fetch('http://localhost:5000/register', {
-    method: "POST",
+
+const criarCandidato = async(Candidate) => {
+  const requisicao = await fetch('https://jobsnet--backend.herokuapp.com/register', {
+      method: "POST",
       headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(Formulario())
-      });
-
-      if (requisicao.status === 200) {
-        alert('Cadastro concluído!');
-    }
-
-    if (requisicao.status === 500) {
-        alert('Dados já cadastrados.');
-    }
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(Formulario())
+  });
+  if(requisicao.status === 200) {
+      alert('Cadastro concluído!');
+  }
+  else if (requisicao.status === 500){
+      alert('Dados já cadastrados..');
+  }
+  else {
+       alert('Seu cadastro não foi realizado');
+   }
+   location.reload();
 }
